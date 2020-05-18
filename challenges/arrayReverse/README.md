@@ -9,3 +9,4 @@ I just made it simple and thought about how can I get the correct output without
 
 ## Solution
 ![array-reverse](../assets/array-reverse.jpg)
+![array-shift](../assets/array-shift.jpg)
