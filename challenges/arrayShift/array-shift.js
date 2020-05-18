@@ -14,8 +14,6 @@ let insertShiftArray = (arr, val) => {
 }
 
 console.log(insertShiftArray([2,4,6,8], 5));
-console.log(insertShiftArray([4,8,15,23,42], 16));
-
 
 module.exports = insertShiftArray;
 
