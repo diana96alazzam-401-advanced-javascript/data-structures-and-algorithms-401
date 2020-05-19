@@ -3,10 +3,10 @@ let insertShiftArray = (arr, val) => {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > val) {
       let firstSlice = arr.slice(0, i);
-      firstSlice.push(val);
+      firstSlice[firstSlice.length]= val;
       let secondSlice = arr.slice(i, arr.length);
       secondSlice.forEach(element => {
-        firstSlice.push(element);
+        firstSlice[firstSlice.length]= element;
       });
       return firstSlice;
     }
