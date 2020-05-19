@@ -1,5 +1,6 @@
 # Binary search an Array
 Third code challenge in 401.
+![Code challenge link](./array-binary-search.js)
 
 ## Challenge
 Search an array for the search key without using inbuilt methods and return the index if exists and -1 if not.
