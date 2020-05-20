@@ -1,5 +1,5 @@
 'use strict';
-const insertShiftArray = require('../array-shift.js');
+const insertShiftArray = require('../challenges/arrayShift/array-shift.js');
 
 describe('Shift array', () => {
   test('It should put the passed value in the correct order in the array', () => {
