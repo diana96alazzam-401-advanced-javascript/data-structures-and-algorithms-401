@@ -1,3 +1,10 @@
+# Code Challenge - 401
+
+## Project: Data structures and algorithms - 401 
+
+### Author: Diana Alazzam
+
+
 ### Table of Contents
 
 challenge 01 - [Array Reverse](challenges/arrayReverse/array-shift.js)
