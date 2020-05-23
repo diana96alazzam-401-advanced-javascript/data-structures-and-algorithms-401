@@ -37,6 +37,9 @@ class LinkedList {
   toString() {
     let current = this.head;
     let string = '';
+    if (!current.next){
+      string = `{ ${current.value} }` + ` -> { ${current.next} }`;
+    }
     while (current.next){
       string = `{ ${current.value} }`;
       current = current.next;
@@ -48,8 +51,12 @@ class LinkedList {
 }
 
 let instance = new LinkedList();
-instance.insert(6);
 instance.insert(7);
+instance.insert(5);
+// instance.insert(3);
+
+
+console.log(instance.includes(7));
 
 
 console.log('instance', instance);
