@@ -19,21 +19,28 @@ class LinkedList {
     }   
 
     let current = this.head;
-    if (!(this.includes(value))){
-      current.next = node;
-      return this;
+    while (current.next){
+      current = current.next;
     }
+    current.next = node;
+    return this;
   }
+
   includes(value){
     let current = this.head;
-    while (current.next){
-      if (value === current.value){
+    if(value === current.value){
+      return true;
+    } else {
+      while (current.next){
         current = current.next;
-        return true;
+        if (value === current.value){
+          return true;
+        }
       }
     }
     return false;
   }
+
   toString() {
     let current = this.head;
     let string = '';
@@ -51,14 +58,13 @@ class LinkedList {
 }
 
 let instance = new LinkedList();
+instance.insert(9);
 instance.insert(7);
 instance.insert(5);
-// instance.insert(3);
+instance.insert(3);
+instance.insert(1);
 
-
-console.log(instance.includes(7));
-
-
+console.log('include', instance.includes(9));
 console.log('instance', instance);
 console.log('instance', instance.toString());
 
