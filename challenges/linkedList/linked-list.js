@@ -56,16 +56,18 @@ class LinkedList {
   }
 }
 
-let instance = new LinkedList();
-instance.insert(9);
-instance.insert(7);
-instance.insert(5);
-instance.insert(3);
-instance.insert(1);
+// let instance = new LinkedList();
+// instance.insert(9);
+// instance.insert(7);
+// instance.insert(5);
+// instance.insert(3);
+// instance.insert(1);
 
-console.log('include', instance.includes(9));
-// console.log('instance', instance);
-console.log('instance', instance.toString());
+// console.log('include', instance.includes(9));
+// console.log('instance', instance.toString());
+
+module.exports = LinkedList;
+
 
 
 
