@@ -17,7 +17,9 @@ Create a singly list with these features:
 Created the node then a singly link list with all required methods then tested if the methods work properly.
 
 ## Solution
-![linked-list](../assets/linked-list.jpg)
+![linked-list-1](../assets/linked-list-1.jpg)
+![linked-list-2](../assets/linked-list-2.jpg)
+
 
 ## Link to code
 [linked-list-code](./linked-list.js)

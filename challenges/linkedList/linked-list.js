@@ -44,9 +44,6 @@ class LinkedList {
   toString() {
     let current = this.head;
     let string = '';
-    if (!current.next){
-      string = `{ ${current.value} }` + ` -> { ${current.next} }`;
-    }
     string = `{ ${current.value} }`;
     while (current.next){
       current = current.next;
