@@ -47,13 +47,12 @@ class LinkedList {
     if (!current.next){
       string = `{ ${current.value} }` + ` -> { ${current.next} }`;
     }
+    string = `{ ${current.value} }`;
     while (current.next){
-      string = `{ ${current.value} }`;
       current = current.next;
-      string = string + ` -> { ${current.value} }` + ` -> { ${current.next} }`;
-
+      string = string + ` -> { ${current.value} }`;
     }
-    return string;
+    return string + ` -> { ${current.next} }`;
   }
 }
 
@@ -65,7 +64,7 @@ instance.insert(3);
 instance.insert(1);
 
 console.log('include', instance.includes(9));
-console.log('instance', instance);
+// console.log('instance', instance);
 console.log('instance', instance.toString());
 
 
