@@ -100,16 +100,13 @@ class LinkedList {
 
 }
 
-const linkedListInstance = new LinkedList();
-linkedListInstance.append(1);
-linkedListInstance.append(3);
-linkedListInstance.append(2);
-linkedListInstance.append(4);
-
-
-console.log(linkedListInstance.insertAfter(3,5));
-
-console.log(linkedListInstance.toString());
+// const linkedListInstance = new LinkedList();
+// linkedListInstance.append(1);
+// linkedListInstance.append(3);
+// linkedListInstance.append(2);
+// linkedListInstance.append(4);
+// console.log(linkedListInstance.insertAfter(3,5));
+// console.log(linkedListInstance.toString());
 
 module.exports = LinkedList;
 
