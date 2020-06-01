@@ -15,6 +15,7 @@ Create a singly list with these features:
  - A method called append(value) which adds a new node with the given value to the end of the list
  - A method called insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node.
  - A method called insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node.
+ - A method called kthFromEnd(k) which takes a number, k, as a parameter and return the node’s value that is k from the end of the linked list. 
  - Exceptions or errors that come from the code is semantic, capturable errors.
 
 ## Approach & Efficiency
