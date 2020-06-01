@@ -25,6 +25,9 @@ Created the node then a singly link list with all required methods then tested i
 ![linked-list-2](../../assets/linked-list-2.jpg)
 ![linked-list-3](../../assets/linked-list-3.jpg)
 ![linked-list-4](../../assets/linked-list-4.jpg)
+![linked-list-5](../../assets/linked-list-5.jpg)
+![linked-list-6](../../assets/linked-list-6.jpg)
+
 
 
 
