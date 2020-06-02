@@ -13,3 +13,5 @@ challenge 03 - [Array Binary Search](challenges/arrayBinarySearch/array-binary-s
 challenge 04 - [Mock Intreview](challenges/mockInt01/mock-int01.js)
 challenge 05 - [Linked lists-1](challenges/Data-Structures/linkedList/linked-list.js)
 challenge 06 - [Linked lists-2](challenges/Data-Structures/linkedList/linked-list.js)
+challenge 07 - [Linked lists-3](challenges/Data-Structures/linkedList/linked-list.js)
+challenge 08 - [Merge two Linked lists](challenges/Data-Structures/linkedList/ll-merge.js)
