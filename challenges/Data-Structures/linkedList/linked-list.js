@@ -126,8 +126,10 @@ class LinkedList {
   } 
 
 }
-module.exports = Node;
-module.exports = LinkedList;
+module.exports = {
+  Node,
+  LinkedList,
+};
 
 
 
