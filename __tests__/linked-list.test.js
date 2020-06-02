@@ -96,5 +96,53 @@ describe('Linked List', () => {
     linkedListInstance.insertAfter(9,8);
     expect(linkedListInstance.toString()).toStrictEqual('{ 10 } -> { 9 } -> { 8 } -> { null }');
   });
+  it('14. Where k is greater than the length of the linked list', () => {
+    const linkedListInstance = new linkedListModule();
+    linkedListInstance.append(10);
+    linkedListInstance.append(9);
+    linkedListInstance.append(8);
+    linkedListInstance.append(7);
 
+    expect(linkedListInstance.kthFromEnd(4)).toStrictEqual('exception');
+  });
+  it('15. Where k and the length of the list are the same', () => {
+    const linkedListInstance = new linkedListModule();
+    linkedListInstance.append(10);
+    linkedListInstance.append(9);
+    linkedListInstance.append(8);
+    linkedListInstance.append(7);
+
+    expect(linkedListInstance.kthFromEnd(3)).toStrictEqual(linkedListInstance.head.value);
+  });
+  it('16. Where k is not a positive integer', () => {
+    const linkedListInstance = new linkedListModule();
+    linkedListInstance.append(10);
+    linkedListInstance.append(9);
+    linkedListInstance.append(8);
+    linkedListInstance.append(7);
+
+    expect(linkedListInstance.kthFromEnd(-1)).toStrictEqual('invalid value');
+  });
+  it('17. Where the linked list is of a size 1', () => {
+    const linkedListInstance = new linkedListModule();
+    linkedListInstance.append(10);
+
+    expect(linkedListInstance.kthFromEnd(0)).toStrictEqual(10);
+  });
+  it('18. “Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    const linkedListInstance = new linkedListModule();
+    linkedListInstance.append(10);
+    linkedListInstance.append(9);
+    linkedListInstance.append(8);
+    linkedListInstance.append(7);
+
+    expect(linkedListInstance.kthFromEnd(2)).toStrictEqual(9);
+  });
+  it('19. When the linked list is empty', () => {
+    const linkedListInstance = new linkedListModule();
+
+    expect(linkedListInstance.kthFromEnd(2)).toStrictEqual('empty linked list');
+  });
 });
+
+

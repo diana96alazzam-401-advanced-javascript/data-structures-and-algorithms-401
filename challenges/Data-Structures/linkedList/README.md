@@ -15,6 +15,7 @@ Create a singly list with these features:
  - A method called append(value) which adds a new node with the given value to the end of the list
  - A method called insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node.
  - A method called insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node.
+ - A method called kthFromEnd(k) which takes a number, k, as a parameter and return the node’s value that is k from the end of the linked list. 
  - Exceptions or errors that come from the code is semantic, capturable errors.
 
 ## Approach & Efficiency
@@ -25,6 +26,9 @@ Created the node then a singly link list with all required methods then tested i
 ![linked-list-2](../../assets/linked-list-2.jpg)
 ![linked-list-3](../../assets/linked-list-3.jpg)
 ![linked-list-4](../../assets/linked-list-4.jpg)
+![linked-list-5](../../assets/linked-list-5.jpg)
+![linked-list-6](../../assets/linked-list-6.jpg)
+
 
 
 
