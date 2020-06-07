@@ -32,10 +32,12 @@ Create a Queue classes list with these features:
 Created the node then a stack and queue classes with all required methods then tested if the methods work properly.
 
 ## Solution
-![stacks-queues](../../assets/stacks-queues.jpg)
+![stacks-queues-1](../assets/stacks-queues-1.jpg)
+![stacks-queues-2](../assets/stacks-queues-2.jpg)
+
+
 
 
 
 ## Link to code
-[stacks-queues-1](./stacks-and-queues-1.js)
-[stacks-queues-2](./stacks-and-queues-2.js)
+[stacks-queues-1](./stacks-and-queues.js)
