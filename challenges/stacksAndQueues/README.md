@@ -37,4 +37,5 @@ Created the node then a stack and queue classes with all required methods then t
 
 
 ## Link to code
-[stacks-queues](./stacks-and-queues.js)
+[stacks-queues-1](./stacks-and-queues-1.js)
+[stacks-queues-2](./stacks-and-queues-2.js)
