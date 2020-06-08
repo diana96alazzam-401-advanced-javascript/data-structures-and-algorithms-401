@@ -33,14 +33,14 @@ class Stack {
   }
 }
 
-let newStack = new Stack();
-newStack.push('red');
-newStack.push('orange');
-newStack.push('green');
-newStack.push('blue');
+// let newStack = new Stack();
+// newStack.push('red');
+// newStack.push('orange');
+// newStack.push('green');
+// newStack.push('blue');
 
 
-console.log(newStack);
+// console.log(newStack);
 
 class Queue {
   constructor() {
@@ -76,17 +76,20 @@ class Queue {
   }
 }
 
-let newQueue = new Queue();
-newQueue.enqueue('red');
-newQueue.enqueue('orange');
-newQueue.enqueue('green');
-newQueue.enqueue('blue');
-newQueue.enqueue('dddd');
-newQueue.dequeue('dddd');
+// let newQueue = new Queue();
+// newQueue.enqueue('red');
+// newQueue.enqueue('orange');
+// newQueue.enqueue('green');
+// newQueue.enqueue('blue');
+// newQueue.enqueue('dddd');
+// newQueue.dequeue('dddd');
 
 
 
-console.log(newQueue.peek());
+// console.log(newQueue.peek());
+
+module.exports =  Stack;
+
 
 
 
