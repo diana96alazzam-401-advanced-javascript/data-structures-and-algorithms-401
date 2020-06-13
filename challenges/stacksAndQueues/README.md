@@ -36,8 +36,5 @@ Created the node then a stack and queue classes with all required methods then t
 ![stacks-queues-2](../assets/stacks-queues-2.jpg)
 
 
-
-
-
 ## Link to code
 [stacks-queues-1](./stacks-and-queues.js)
