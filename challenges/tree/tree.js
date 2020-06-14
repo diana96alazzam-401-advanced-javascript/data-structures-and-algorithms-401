@@ -47,57 +47,57 @@ class BinaryTree {
   }
 }
 
-class BinarySearchTree {
-  constructor(root) {
-    this.root = root;
-  }
-  add(val) {
-    var newNode = new Node(val);
+// class BinarySearchTree {
+//   constructor(root) {
+//     this.root = root;
+//   }
+//   add(val) {
+//     var newNode = new Node(val);
 
-    if (this.root === null)
-      this.root = newNode;
-    else {
-      this.insertNode(this.root, newNode);
-    }
-  }
+//     if (this.root === null)
+//       this.root = newNode;
+//     else {
+//       this.insertNode(this.root, newNode);
+//     }
+//   }
 
 
-  insertNode(node, newNode) {
-    if (newNode.data < node.data) {
-      if (node.left === null) {
-        node.left = newNode;
-      } else {
-        this.insertNode(node.left, newNode);
-      }
-    } else {
-      if (node.right === null) {
-        node.right = newNode;
-      }
-      else {
-        this.insertNode(node.right, newNode);
-      }
-    }
-  }
+//   insertNode(node, newNode) {
+//     if (newNode.data < node.data) {
+//       if (node.left === null) {
+//         node.left = newNode;
+//       } else {
+//         this.insertNode(node.left, newNode);
+//       }
+//     } else {
+//       if (node.right === null) {
+//         node.right = newNode;
+//       }
+//       else {
+//         this.insertNode(node.right, newNode);
+//       }
+//     }
+//   }
 
-  //   contains(){
+//   //   contains(){
 
-  //   }
-}
+//   //   }
+// }
 
-const five = new Node(5);
-const two = new Node(2);
-const four = new Node(4);
-const six = new Node(6);
-const three = new Node(3);
-const eight = new Node(8);
-const nine = new Node(9);
-const one = new Node(1);
-const seven = new Node(7);
-const ten = new Node(10);
-const twentyTwo = new Node(22);
+// const five = new Node(5);
+// const two = new Node(2);
+// const four = new Node(4);
+// const six = new Node(6);
+// const three = new Node(3);
+// const eight = new Node(8);
+// const nine = new Node(9);
+// const one = new Node(1);
+// const seven = new Node(7);
+// const ten = new Node(10);
+// const twentyTwo = new Node(22);
 
-five.left = two;
-five.right = six;
+// five.left = two;
+// five.right = six;
 // two.left = three;
 // two.right = six;
 // three.left = eight;
@@ -109,7 +109,13 @@ five.right = six;
 
 
 
-let tree = new BinaryTree(five);
-let newBinarySearchTree = new BinarySearchTree();
-newBinarySearchTree.add(1);
-console.log(tree.postOrder());
+// let tree = new BinaryTree(five);
+// let newBinarySearchTree = new BinarySearchTree();
+// newBinarySearchTree.add(1);
+// console.log(tree.postOrder());
+
+
+module.exports = {
+  Node,
+  BinaryTree,
+};
