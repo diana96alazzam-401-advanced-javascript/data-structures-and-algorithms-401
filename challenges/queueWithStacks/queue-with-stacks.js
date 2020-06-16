@@ -1,46 +1,49 @@
 'use strict';
 
-const Stack = require('../stacksAndQueues/stacks-and-queues');
+class Stack {
+  constructor(){
+    this.storage = {};
+    this.size = 0;
+  }
+  push(value){
+    this.storage[this.size ++] = value;
+  }
+  pop(){
+    let result = this.storage[-- this.size];
+    delete this.storage[this.size];
+    return result;
+  }
+}
 
 class PseudoQueue {
   constructor(){
-    this.storage = new Stack();
-    this.front = null;    
+    this.enqueueStack = new Stack();
+    this.dequeueStack = new Stack();
   }
   enqueue(value){
-    this.storage.push(value);
-    if (!this.front) {
-      this.front = this.storage[0];
-    //   this.front.next = null;
-    } else {
-      var count = 2;
-      for (let i = 0; i < this.storage.length - 1; i++) {
-        this.storage[i].next = count;
-        count++;
-      }
-    }
+    this.enqueueStack.push(value)
   }
   dequeue(){
-    this.storage.pop();
-    this.front = (this.storage[0]) ? (this.storage[0]) : null;
-    for (let i = 0; i < this.storage.length - 1; i++) {
-      this.storage[i].next = this.storage[i].next - 1;
+    if(this.dequeueStack.size === 0){
+      while(this.enqueueStack.size){
+        this.dequeueStack.push(this.enqueueStack.pop());
+      }
     }
+    return this.dequeueStack.pop();
   }
 }
 
 let newPseudoQueue = new PseudoQueue();
-newPseudoQueue.enqueue(5);
-newPseudoQueue.enqueue(10);
-newPseudoQueue.enqueue(15);
 newPseudoQueue.enqueue(20);
+newPseudoQueue.enqueue(15);
+newPseudoQueue.enqueue(10);
+
+newPseudoQueue.enqueue(5);
 
 newPseudoQueue.dequeue();
-
+// newPseudoQueue.dequeue();
+// newPseudoQueue.dequeue();
+// newPseudoQueue.dequeue();
 
 
 console.log(newPseudoQueue);
-
-newPseudoQueue.storage.storage.forEach((elem)=> {
-  console.log(elem);
-});
