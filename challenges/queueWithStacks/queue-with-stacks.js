@@ -21,7 +21,7 @@ class PseudoQueue {
     this.dequeueStack = new Stack();
   }
   enqueue(value){
-    this.enqueueStack.push(value)
+    this.enqueueStack.push(value);
   }
   dequeue(){
     if(this.dequeueStack.size === 0){
