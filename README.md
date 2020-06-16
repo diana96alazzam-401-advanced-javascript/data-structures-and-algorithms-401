@@ -16,3 +16,4 @@ challenge 06 - [Linked lists-2](challenges/Data-Structures/linkedList/linked-lis
 challenge 07 - [Linked lists-3](challenges/Data-Structures/linkedList/linked-list.js)
 challenge 08 - [Merge two Linked lists](challenges/Data-Structures/linkedList/ll-merge.js)
 challenge 10 - [Stacks and queues](challenges/stacksAndQueues/stacks-and-queues.js)
+challenge 11 - [Queue with stacks](challenges/queueWithStacks/queue-with-stacks.js)
