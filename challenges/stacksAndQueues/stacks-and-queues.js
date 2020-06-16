@@ -76,19 +76,20 @@ class Queue {
   }
 }
 
-// let newQueue = new Queue();
-// newQueue.enqueue('red');
-// newQueue.enqueue('orange');
-// newQueue.enqueue('green');
-// newQueue.enqueue('blue');
-// newQueue.enqueue('dddd');
-// newQueue.dequeue('dddd');
+let newQueue = new Queue();
+newQueue.enqueue('red');
+newQueue.enqueue('orange');
+newQueue.enqueue('green');
+newQueue.enqueue('blue');
+newQueue.enqueue('dddd');
+newQueue.dequeue('dddd');
 
 
 
-// console.log(newQueue.peek());
+console.log(newQueue.peek());
 
 module.exports =  Stack;
+
 
 
 
