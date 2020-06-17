@@ -19,7 +19,7 @@ Implement the linked list concept and insertion.
 
 ## Solution
 Not done yet :'(
-![tree-1]()
+![tree-1](../assets/binary-search-tree.png)
 
 
 ## Link to code

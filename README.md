@@ -19,5 +19,6 @@ challenge 10 - [Stacks and queues](challenges/stacksAndQueues/stacks-and-queues.
 <!-- challenge 10 - [Stacks and queues](challenges/stacksAndQueues/stacks-and-queues.js) -->
 <!-- challenge 10 - [Stacks and queues](challenges/stacksAndQueues/stacks-and-queues.js) -->
 challenge 13 - [Multi bracket validation](challenges/multiBracketValidation/multi-bracket-validation.js)
+challenge 15 - [Binary Tree and BST Implementation](challenges/tree/tree.js)
 
 

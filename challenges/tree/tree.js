@@ -25,11 +25,13 @@ class Node {
   }
   search(val){
     if(this.value === val){
-      return this;
+      return true;
     } else if ((val < this.value) && (this.left !== null)){
       return this.left.search(val);
     } else if ((val > this.value) && (this.right !== null)){
       return this.right.search(val);
+    } else {
+      return false;
     }
   }
 }
@@ -88,7 +90,7 @@ class BinarySearchTree {
   contain(val){
     let foundVal = this.root.search(val);  
     console.log(foundVal);
-    return foundVal;  
+    return (foundVal)? true : false;  
   }
 }
 
@@ -105,7 +107,7 @@ newBinarySearchTree.add(30);
 newBinarySearchTree.add(8);
 newBinarySearchTree.add(2);
 
-newBinarySearchTree.contain(2);
+newBinarySearchTree.contain(0);
 
 
 console.log(util.inspect(newBinarySearchTree, false, null, true));
