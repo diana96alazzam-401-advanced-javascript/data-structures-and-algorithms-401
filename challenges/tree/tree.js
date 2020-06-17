@@ -15,7 +15,7 @@ class Node {
       } else {
         this.left.binaryAddNode(node);
       }
-    } else if (node.right>this.value) {
+    } else if (node.value>this.value) {
       if (this.right === null) {
         this.right = node;
       } else {
@@ -81,18 +81,18 @@ class BinarySearchTree {
 
 
 
-
-
-// let tree = new BinaryTree(five);
 let newBinarySearchTree = new BinarySearchTree();
-for (let i = 1; i<10; i++){
-  newBinarySearchTree.add(i);
-}
+
+newBinarySearchTree.add(5);
+newBinarySearchTree.add(6);
+newBinarySearchTree.add(20);
+newBinarySearchTree.add(15);
+newBinarySearchTree.add(30);
+newBinarySearchTree.add(8);
+newBinarySearchTree.add(2);
 
 
 console.log(util.inspect(newBinarySearchTree, false, null, true));
-
-// console.log(newBinarySearchTree);
 
 
 module.exports = {
