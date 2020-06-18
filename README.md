@@ -16,11 +16,5 @@ challenge 06 - [Linked lists-2](challenges/Data-Structures/linkedList/linked-lis
 challenge 07 - [Linked lists-3](challenges/Data-Structures/linkedList/linked-list.js)
 challenge 08 - [Merge two Linked lists](challenges/Data-Structures/linkedList/ll-merge.js)
 challenge 10 - [Stacks and queues](challenges/stacksAndQueues/stacks-and-queues.js)
-<!-- challenge 10 - [Stacks and queues](challenges/stacksAndQueues/stacks-and-queues.js) -->
-<!-- challenge 10 - [Stacks and queues](challenges/stacksAndQueues/stacks-and-queues.js) -->
 challenge 13 - [Multi bracket validation](challenges/multiBracketValidation/multi-bracket-validation.js)
-challenge 16 - [FizzBuzz Tree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
-
-challenge 18 - [Find-maximum-binary-tree](challenges/tree/tree.js)
-
-
+challenge 15 - [Binary Tree and BST Implementation](challenges/tree/tree.js)

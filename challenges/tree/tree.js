@@ -1,15 +1,43 @@
 'use strict';
 
+const util = require('util');
+
 class Node {
   constructor(value, right = null, left = null) {
     this.value = value;
     this.right = right;
     this.left = left;
   }
+  binaryAddNode(node){
+    if(node.value<this.value){
+      if(this.left === null){
+        this.left = node;
+      } else {
+        this.left.binaryAddNode(node);
+      }
+    } else if (node.value>this.value) {
+      if (this.right === null) {
+        this.right = node;
+      } else {
+        this.right.binaryAddNode(node);
+      }
+    }
+  }
+  search(val){
+    if(this.value === val){
+      return true;
+    } else if ((val < this.value) && (this.left !== null)){
+      return this.left.search(val);
+    } else if ((val > this.value) && (this.right !== null)){
+      return this.right.search(val);
+    } else {
+      return false;
+    }
+  }
 }
-
 class BinaryTree {
-  constructor(root) {
+
+  constructor(root){
     this.root = root;
   }
   preOrder() {
@@ -45,74 +73,89 @@ class BinaryTree {
     _traversal(this.root);
     return results;
   }
+  findMaximumValue(){
+    let value = this.root.value;
+    let _tr = (node) => {
+      if(value<node.left){
+        node = node.left;
+        _tr(node.left);
+      } else if (value<node.right){
+        node = node.right;
+        _tr(node.right);
+      } else if (value>node.left){
+        _tr(node.left);
+      } else if (value>node.right){
+        _tr(node.left);
+      } 
+    };  
+    _tr(this.root);
+    return value;
+  }
 }
 
-// class BinarySearchTree {
-//   constructor(root) {
-//     this.root = root;
-//   }
-//   add(val) {
-//     var newNode = new Node(val);
+class BinarySearchTree {
+  constructor() {  
+    this.root = null;
+  }
+  add(val) {
+    let newNode = new Node(val);
+    if (this.root === null){
+      this.root = newNode;
+    } else {
+      this.root.binaryAddNode(newNode);
+    }
+  }
+  contain(val){
+    let foundVal = this.root.search(val);  
+    console.log(foundVal);
+    return (foundVal)? true : false;  
+  }
+}
 
-//     if (this.root === null)
-//       this.root = newNode;
-//     else {
-//       this.insertNode(this.root, newNode);
-//     }
-//   }
 
+let two = new Node(2);
+let two2 = new Node(2);
 
-//   insertNode(node, newNode) {
-//     if (newNode.data < node.data) {
-//       if (node.left === null) {
-//         node.left = newNode;
-//       } else {
-//         this.insertNode(node.left, newNode);
-//       }
-//     } else {
-//       if (node.right === null) {
-//         node.right = newNode;
-//       }
-//       else {
-//         this.insertNode(node.right, newNode);
-//       }
-//     }
-//   }
+let seven = new Node(7);
+let five = new Node(5);
+let five2 = new Node(5);
 
-//   //   contains(){
+let six = new Node(6);
+let nine = new Node(9);
+let eleven = new Node(11);
+let four = new Node(4);
 
-//   //   }
-// }
+two.right = five;
+two.left = seven;
 
-// const five = new Node(5);
-// const two = new Node(2);
-// const four = new Node(4);
-// const six = new Node(6);
-// const three = new Node(3);
-// const eight = new Node(8);
-// const nine = new Node(9);
-// const one = new Node(1);
-// const seven = new Node(7);
-// const ten = new Node(10);
-// const twentyTwo = new Node(22);
+seven.right = six;
+seven.left = two2;
 
-// five.left = two;
-// five.right = six;
-// two.left = three;
-// two.right = six;
-// three.left = eight;
-// six.right = nine;
-// four.left = one;
-// four.right = seven;
-// seven.left = ten;
-// seven.right = twentyTwo;
+six.right = eleven;
+six.left = five2;
+
+five.right = nine;
+nine.left = four;
 
 
 
-// let tree = new BinaryTree(five);
-// let newBinarySearchTree = new BinarySearchTree();
-// newBinarySearchTree.add(1);
-// console.log(tree.postOrder());
+let tree = new BinaryTree(two);
+console.log(tree.findMaximumValue());
+
+let newBinarySearchTree = new BinarySearchTree();
+
+newBinarySearchTree.add(5);
+newBinarySearchTree.add(6);
+newBinarySearchTree.add(20);
+newBinarySearchTree.add(15);
+newBinarySearchTree.add(30);
+newBinarySearchTree.add(8);
+newBinarySearchTree.add(2);
+
+newBinarySearchTree.contain(0);
+
+
+console.log(util.inspect(newBinarySearchTree, false, null, true));
 
 
 module.exports = {
