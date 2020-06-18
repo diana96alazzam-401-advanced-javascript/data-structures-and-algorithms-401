@@ -13,11 +13,11 @@ Implement a Queue using two Stacks.
   - The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
 
 ## Approach & Efficiency
-Created the node then a stack and queue classes with all required methods then tested if the methods work properly.
+Tried to keep it to only O(n) with one while loop.
 
 ## Solution
-![stacks-with-queues](../assets/stacks-with-queues.jpg)
+![stacks-with-queues](../assets/twoStacksQueue.png)
 
 
 ## Link to code
-[stacks-queues-1](./stacks-and-queues.js)
+[queue-with-stacks](./queue-with-stacks.js)
