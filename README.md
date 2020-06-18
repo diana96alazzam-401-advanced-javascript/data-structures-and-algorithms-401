@@ -19,4 +19,5 @@ challenge 10 - [Stacks and queues](challenges/stacksAndQueues/stacks-and-queues.
 challenge 13 - [Multi bracket validation](challenges/multiBracketValidation/multi-bracket-validation.js)
 challenge 15 - [Binary Tree and BST Implementation](challenges/tree/tree.js)
 challenge 16 - [FizzBuzz Tree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
+challenge 17 - [Breadth First](challenges/tree/tree.js/)
 
