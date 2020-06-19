@@ -18,3 +18,6 @@ challenge 08 - [Merge two Linked lists](challenges/Data-Structures/linkedList/ll
 challenge 10 - [Stacks and queues](challenges/stacksAndQueues/stacks-and-queues.js)
 challenge 13 - [Multi bracket validation](challenges/multiBracketValidation/multi-bracket-validation.js)
 challenge 15 - [Binary Tree and BST Implementation](challenges/tree/tree.js)
+challenge 16 - [FizzBuzz Tree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
+challenge 17 - [Breadth First](challenges/tree/tree.js/)
+
