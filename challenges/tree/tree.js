@@ -1,6 +1,7 @@
 'use strict';
 
 const util = require('util');
+const { compileFunction } = require('vm');
 
 class Node {
   constructor(value, right = null, left = null) {
@@ -73,24 +74,6 @@ class BinaryTree {
     _traversal(this.root);
     return results;
   }
-  // traverseBreadth() {
-  //   let results = [this.root.value];
-  //   let queue = [];
-  //   let _traversal = (node)=> {
-  //     if(node !== null){
-  //       if(node.left){
-  //         results[results.length] = node.left.value;
-  //       }
-  //       if (node.right){
-  //         results[results.length] = node.right.value;
-  //       }
-  //       _traversal(node.left);
-  //       _traversal(node.right);
-  //     } 
-  //   };
-  //   _traversal(this.root);
-  //   return results;
-  // }
   breadthFirstTraverse() {
     let results = [];
     let queue = [];
@@ -98,11 +81,15 @@ class BinaryTree {
   
     queue.push(current);
     while (queue.length) {
-      current = queue.shift();
-      // current = queue[0];
-      // for (let i = 1; i<queue.length; i++){
-      //   queue[i]=queue[i+1] || 0;
-      // }
+      
+      // instead of shift 
+      current = queue[0];
+      for (var i = 0; i < queue.length - 1; i++) {
+        queue[i] = queue[i + 1];
+      }
+      queue.length = queue.length - 1;
+      ///////////////////////////////// 
+
       results[results.length] = current.value;
   
       if (current.left) queue[queue.length] = current.left;
