@@ -20,4 +20,6 @@ challenge 13 - [Multi bracket validation](challenges/multiBracketValidation/mult
 challenge 15 - [Binary Tree and BST Implementation](challenges/tree/tree.js)
 challenge 16 - [FizzBuzz Tree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
 challenge 17 - [Breadth First](challenges/tree/tree.js/)
+challenge 18 - [Find max value](challenges/tree/tree.js/)
+
 
