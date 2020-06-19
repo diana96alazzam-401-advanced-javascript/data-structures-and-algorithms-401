@@ -1,7 +1,6 @@
 'use strict';
 
 const util = require('util');
-const { compileFunction } = require('vm');
 
 class Node {
   constructor(value, right = null, left = null) {
@@ -81,7 +80,7 @@ class BinaryTree {
   
     queue.push(current);
     while (queue.length) {
-      
+
       // instead of shift 
       current = queue[0];
       for (var i = 0; i < queue.length - 1; i++) {
