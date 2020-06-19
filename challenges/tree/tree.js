@@ -78,7 +78,7 @@ class BinaryTree {
     let queue = [];
     let current = this.root;
   
-    queue.push(current);
+    queue[queue.length] = current;
     while (queue.length) {
 
       // instead of shift 
