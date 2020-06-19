@@ -73,23 +73,40 @@ class BinaryTree {
     _traversal(this.root);
     return results;
   }
+  breadthFirstTraverse() {
+    let results = [];
+    let queue = [];
+    let current = this.root;
+  
+    queue[queue.length] = current;
+    while (queue.length) {
+
+      // instead of shift 
+      current = queue[0];
+      for (var i = 0; i < queue.length - 1; i++) {
+        queue[i] = queue[i + 1];
+      }
+      queue.length = queue.length - 1;
+      ///////////////////////////////// 
+
+      results[results.length] = current.value;
+  
+      if (current.left) queue[queue.length] = current.left;
+      if (current.right) queue[queue.length] = current.right;
+    }
+    return results;
+  }
   findMaximumValue(){
-    let value = this.root.value;
-    let _tr = (node) => {
-      if(value<node.left){
-        node = node.left;
-        _tr(node.left);
-      } else if (value<node.right){
-        node = node.right;
-        _tr(node.right);
-      } else if (value>node.left){
-        _tr(node.left);
-      } else if (value>node.right){
-        _tr(node.left);
-      } 
-    };  
-    _tr(this.root);
-    return value;
+    let max = 0;
+    let _traversal = (node) => {
+      if(node.value>max){
+        max = node.value;
+      }
+      if (node.left) _traversal(node.left);
+      if (node.right) _traversal(node.right);
+    };
+    _traversal(this.root);
+    return max;
   }
 }
 
@@ -113,49 +130,29 @@ class BinarySearchTree {
 }
 
 
-let two = new Node(2);
-let two2 = new Node(2);
 
+let two = new Node(2);
 let seven = new Node(7);
+let two2 = new Node(2);
+let six = new Node(6);
 let five = new Node(5);
 let five2 = new Node(5);
-
-let six = new Node(6);
 let nine = new Node(9);
-let eleven = new Node(11);
 let four = new Node(4);
 
 two.right = five;
 two.left = seven;
-
 seven.right = six;
 seven.left = two2;
-
-six.right = eleven;
 six.left = five2;
-
 five.right = nine;
 nine.left = four;
 
 
+let newTree = new BinaryTree(two);
+console.log(newTree.findMaximumValue());
 
-let tree = new BinaryTree(two);
-console.log(tree.findMaximumValue());
-
-let newBinarySearchTree = new BinarySearchTree();
-
-newBinarySearchTree.add(5);
-newBinarySearchTree.add(6);
-newBinarySearchTree.add(20);
-newBinarySearchTree.add(15);
-newBinarySearchTree.add(30);
-newBinarySearchTree.add(8);
-newBinarySearchTree.add(2);
-
-newBinarySearchTree.contain(0);
-
-
-console.log(util.inspect(newBinarySearchTree, false, null, true));
+// console.log(util.inspect(newBinarySearchTree, false, null, true));
 
 
 module.exports = {
