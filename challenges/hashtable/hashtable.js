@@ -73,14 +73,14 @@ class Hashmap {
 }
 
 const hashmap = new Hashmap(4000); // ==> [4000]
-hashmap.set('name', 'mahmoud');
+hashmap.set('name', 'diana');
 hashmap.set('one', 'thing');
 hashmap.set('eno', '1');
 hashmap.set('neo', '2');
 hashmap.set('this', 'nothing');
 console.log(hashmap.storage);
 console.log(
-  'hi',
+  'Hey',
   hashmap.storage[3923].head.value['name'],
   hashmap.storage[2118].head.next,
 );
