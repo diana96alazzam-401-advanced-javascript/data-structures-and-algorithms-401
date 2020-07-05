@@ -16,7 +16,7 @@ Hash Tables implementation.
 
 
 ## Solution
-<!-- ![hashtable](../assets/) -->
+![hashtable](../assets/hashtable.png)
 
 
 ## Link to code
