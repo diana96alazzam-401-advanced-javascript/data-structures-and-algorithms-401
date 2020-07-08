@@ -1,4 +1,7 @@
 ## Insertion sort
+
+![insertion-sort](../assets/insertion-sort-blog.png)
+
   - Array sorting:
     * Create a for loop that iterate the array with a starting `i = 1`.
     * Inside the for loop define two variables; one that will hold a temporary value for the first element to be compared with called `temp` and the other to hold its index aclled `j`.
