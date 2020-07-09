@@ -1,58 +1,60 @@
-function Mergesort(arr){
-  let n = arr.length;    
-  if (n > 1){
-    let mid = n/2;
-    let left = [];
-    let right = [];
-    for (let h = 0; h<mid; h++){
-      left.push(arr[h]);
-    }
-    for (let p = 1; p<n-mid+1; p++){
-      right.push(arr[n-p]);
-    }
-    // // sort the left side
-    Mergesort(left);
-    // // sort the right side
-    Mergesort(right);
-    // // merge the sorted left and right sides together
-    Merge(left, right, arr);
+'use strict';
+
+function mergeSort (arr) {
+  if (arr.length <= 1) {
+    return arr;
   }
-  // console.log('hello', arr)
-  return arr;
+  const mid = Math.floor(arr.length / 2);
+  const left = [];
+  const right = [];
+
+  for (let i = 0; i<mid; i++){
+    left[left.length] = arr[i];
+  }
+  for (let i = 1; i<arr.length-mid+1; i++){
+    right[right.length] = arr[arr.length-i];
+  }
+
+  return merge(mergeSort(left), mergeSort(right));
 }
 
-Mergesort([8,4,23,42,16,15]);
+function merge (left, right) {
+  let resultArray = [], leftIndex = 0, rightIndex = 0;
 
-function Merge(left, right, arr) {
-  console.log('ppp', left, right);
-
-  let i = 0;
-  let j = 0;
-  let k = 0;
-
-  while ((i < left.length) && (j < right.length)){
-    if (left[i] <= right[j]){
-      arr[k] = left[i];
-      i = i + 1;
+  while (leftIndex < left.length && rightIndex < right.length) {
+    
+    if (left[leftIndex] < right[rightIndex]) {
+      resultArray[resultArray.length]=left[leftIndex];
+      leftIndex++; 
+    } else {
+      resultArray[resultArray.length]=right[rightIndex];
+      rightIndex++;
     }
-    else {
-      arr[k] = right[j];
-      j = j + 1;
-    }
-          
-    k = k + 1;
+
   }
-
-  if (i == left.length){
-    for (let p = 1; p<arr.length; p++){
-      right.push(arr[p]);
-    }
-
-    // console.log('arrrrr', arr , right)
-  //    set remaining entries in arr to remaining values in right
-  } else {
-    for (let p = 1; p<arr.length; p++){
-      left.push(arr[p]);
-    }    //    set remaining entries in arr to remaining values in left
+  // slice the left array
+  let leftTempArr=[];
+  for (let i = 1; i<left.length-leftIndex+1; i++){
+    leftTempArr[leftTempArr.length]= left[left.length-i];
   }
+  // concatenate the left arr with the result array
+  for(let i = 0; i<leftTempArr.length; i++){
+    resultArray[resultArray.length]=leftTempArr[i];
+  }
+  // slice the right array
+  let rightTempArr=[];
+  for (let i = 1; i<right.length-rightIndex+1; i++){
+    rightTempArr[rightTempArr.length]= right[right.length-i];
+  }
+  // concatenate the left arr with the result array
+  //  for(let i = 0; i<rightTempArr.length; i++){
+  //    resultArray[resultArray.length]=rightTempArr[i];
+  //  }
+  return (
+    resultArray
+      .concat(right.slice(rightIndex)));
 }
+
+let arr = [8,4,23,42,16,15];
+console.log(mergeSort (arr));
+
