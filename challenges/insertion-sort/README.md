@@ -20,6 +20,8 @@ The provided pseudo code :
         
       arr[j + 1] <-- temp
 
+## Link to BLOG
+[insertion-sort-blog](./BLOG.md)
 
 ## Link to code
 [insertion-sort-code](./insertion-sort.js)
