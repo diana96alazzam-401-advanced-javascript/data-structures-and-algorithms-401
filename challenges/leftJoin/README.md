@@ -25,4 +25,4 @@ Utilize the Single-responsibility principle: any methods you write should be cle
 
 
 ## Link to code
-[hashtable](./left-join.js)
+[left-join](./left-join.js)
