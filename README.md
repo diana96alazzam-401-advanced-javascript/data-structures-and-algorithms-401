@@ -22,4 +22,6 @@ challenge 16 - [FizzBuzz Tree](challenges/fizzBuzzTree/fizz-buzz-tree.js)
 challenge 17 - [Breadth First](challenges/tree/tree.js/)
 challenge 18 - [Find max value](challenges/tree/tree.js/)
 
+challenge 30 - [Hashtables implementation](challenges/hashtable/hashtable.js/)
+
 
