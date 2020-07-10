@@ -1,56 +1,22 @@
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
+'use strict';
 
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  prepend(value) {
-    const node = new Node(value);
-    if (!this.head) {
-      this.head = node;
-    } else {
-      node.next = this.head;
-      this.head = node;
-    }
-  }
-  includes(value){
-    let current = this.head;
-    if(value === current.value){
-      return true;
-    } else {
-      while (current.next){
-        current = current.next;
-        if (value === current.value){
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-}
 class Hashmap {
   constructor(size) {
     this.size = size;
     this.storage = new Array(size);
   }
   hash(key) {
-
-    const hashKey = (key * 19) % this.size;
+    const hashKey = key;
     return hashKey;
   }
-  add(key, value) {
-    const hash = this.hash(key);
+  add(value) {
+    const hash = this.hash(value);
     if (!this.storage[hash]) {
-      const ll = new LinkedList();
-      ll.prepend({ [key]: value });
-      this.storage[hash] = ll;
+      let arr = [];
+      arr.push(value);
+      this.storage[hash] = arr;
     } else {
-      this.storage[hash].prepend({ [key]: value });
+      this.storage[hash] = value;
     }
   }
   contain(key) {
@@ -177,25 +143,24 @@ let secondTree = new BinaryTree(tree21);
 
 function tree_intersection(tree1, tree2){
   let output = [];
-  let hashmap = new Hashmap(100);
+
+  let hashmap = new Hashmap(4000);
   let firstTreeValues = tree1.inOrder();
   firstTreeValues.forEach(value=> {
-    let key = hashmap.hash(value);
-    hashmap.add(key, value);
+    hashmap.add(value);
   });
-  let secondTreeValues = tree1.inOrder();
-  console.log(secondTreeValues);
+
+  let secondTreeValues = tree2.inOrder();
 
   secondTreeValues.forEach(value=> {
-    let key = hashmap.hash(value);
-    console.log(key);
-    console.log(hashmap.storage);
 
+    let key = hashmap.hash(value);
     if(hashmap.storage[key]){
-      output.push(hashmap.hash(value));
+      output.push(value);
     }
   });
+
   return output;
 }
 
-tree_intersection(firstTree, secondTree);
+console.log(tree_intersection(firstTree, secondTree));
