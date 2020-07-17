@@ -14,7 +14,14 @@ class Graph {
     this._adjancyList = new Map();
   }
   addVertex(vertex) {
+    console.log('diana', vertex);
     this._adjancyList.set(vertex, []);
+  }
+  GetNodes(){
+    return this._adjancyList.entries();
+  }
+  Size(){
+    return this._adjancyList.size;
   }
   addDirectedEdge(startVertex, endVertex, weight) {
     if (
@@ -27,13 +34,24 @@ class Graph {
       adjacencies.push(new Edge(endVertex, weight));
     }
   }
+  addUndirectedEdge(firstVertex, secondVertex, weight){
+    // not sure about this
+    if (
+      !this._adjancyList.has(firstVertex) ||
+      !this._adjancyList.has(secondVertex)
+    ) {
+      console.log('Vertex not found');
+    } else {
+      this._adjancyList.get(firstVertex).push(new Edge(secondVertex, weight));
+      this._adjancyList.get(secondVertex).push(new Edge(firstVertex, weight));
+    }
+  }
   getNeighbors(vertex) {
     if (this._adjancyList.has(vertex)) {
       return this._adjancyList.get(vertex);
     }
   }
   printAll() {
-    // console.log(this._adjancyList.entries());
     for (const [vertex, edge] of this._adjancyList.entries()) {
       console.log('V>> ', vertex);
       console.log('E>>', edge);
@@ -63,5 +81,7 @@ graph.addDirectedEdge(six, eight);
 graph.addDirectedEdge(three, seven);
 graph.addDirectedEdge(eight, three);
 // console.log(graph);
-graph.printAll();
-console.log('NEIGHBORS', graph.getNeighbors(ten));
+// graph.printAll();
+// console.log('NEIGHBORS', graph.getNeighbors(ten));
+
+console.log(graph.GetNodes());
